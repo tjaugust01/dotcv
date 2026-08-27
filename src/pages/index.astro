@@ -164,9 +164,12 @@ const jsonLd = {
     <WebComponent data={data} locale={config.locale} config={config} />
 
     <!-- Hidden iframe print script -->
-    <script>
-      function triggerPdfPrint(printUrl = "/print/ats") {
-        let iframe = document.getElementById("cv-hidden-print-frame") as HTMLIFrameElement;
+    <!-- Hidden iframe print script -->
+    <script define:vars={{ base: import.meta.env.BASE_URL }}>
+      const cleanBase = base.endsWith("/") ? base : `${base}/`;
+
+      function triggerPdfPrint(printUrl = `${cleanBase}print/ats`) {
+        let iframe = document.getElementById("cv-hidden-print-frame");
         
         if (iframe) {
           iframe.remove();
@@ -199,11 +202,11 @@ const jsonLd = {
 
       function setupPrintButtons() {
         document.addEventListener("click", (event) => {
-          const target = (event.target as HTMLElement).closest("[data-print-pdf]");
+          const target = event.target?.closest("[data-print-pdf]");
           if (target) {
             event.preventDefault();
             const type = target.getAttribute("data-print-pdf");
-            const printUrl = type === "design" ? "/print/design" : "/print/ats";
+            const printUrl = type === "design" ? `${cleanBase}print/design` : `${cleanBase}print/ats`;
             triggerPdfPrint(printUrl);
           }
         });
