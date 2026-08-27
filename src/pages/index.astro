@@ -19,7 +19,9 @@ const description = data.profile.bio || `${data.profile.name} | ${data.profile.t
 let avatarUrl = data.profile.avatar;
 if (avatarUrl && !avatarUrl.startsWith("http://") && !avatarUrl.startsWith("https://")) {
   try {
-    avatarUrl = new URL(avatarUrl, siteUrl).href;
+    const base = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
+    const fullPath = base ? `${base}/${avatarUrl.replace(/^\//, "")}` : avatarUrl;
+    avatarUrl = new URL(fullPath, siteUrl).href;
   } catch {
     avatarUrl = undefined;
   }

@@ -1,6 +1,7 @@
 ---
 import type { CVData } from "../../lib/cvSchema";
 import { getTranslations } from "../../lib/i18n";
+import { resolveAsset } from "../../lib/assets";
 
 interface Props {
   data: CVData;
@@ -24,7 +25,7 @@ function formatDate(dateStr?: string | null, isCurrent?: boolean) {
     <div class="sidebar-profile">
       {profile.avatar && (
         <div class="avatar-box">
-          <img src={profile.avatar} alt={profile.name} class="avatar" />
+          <img src={resolveAsset(profile.avatar)} alt={profile.name} class="avatar" />
         </div>
       )}
       <h1 class="sidebar-name">{profile.name}</h1>

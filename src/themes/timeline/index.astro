@@ -2,6 +2,7 @@
 import type { CVData } from "../../lib/cvSchema";
 import type { DotcvConfig } from "../../lib/configSchema";
 import { getTranslations } from "../../lib/i18n";
+import { resolveAsset } from "../../lib/assets";
 
 interface Props {
   data: CVData;
@@ -48,7 +49,7 @@ function formatDate(dateStr?: string | null, isCurrent?: boolean) {
     <div class="hero-content">
       {profile.avatar && (
         <div class="hero-avatar-wrapper">
-          <img src={profile.avatar} alt={profile.name} class="hero-avatar" />
+          <img src={resolveAsset(profile.avatar)} alt={profile.name} class="hero-avatar" />
           <div class="avatar-ring"></div>
         </div>
       )}

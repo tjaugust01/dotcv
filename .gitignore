@@ -39,6 +39,7 @@ Thumbs.db
 
 # Temporary / Scratch files & AI Agent notes
 scratch/
+TODO.md
 .system_generated/
 AGENTS.md
 
