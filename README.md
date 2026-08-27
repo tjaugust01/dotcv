@@ -2,9 +2,11 @@
 
 > A modern, minimalist, and ATS-friendly CV and portfolio platform inspired by *readcv*, built with [Astro](https://astro.build).
 
+[**Live Demo ↗**](https://tjaugust01.github.io/dotcv/) · [Features](#features) · [Themes](#available-themes) · [Quick Start](#quick-start) · [Documentation](#configuration-reference)
+
 Manage your resume data and preferences in simple root configuration files and get an elegant online presence alongside a machine-readable, printable PDF resume.
 
-![dotcv Preview](docs/images/hero-preview.png)
+[![dotcv Preview](docs/images/hero-preview.png)](https://tjaugust01.github.io/dotcv/)
 
 ---
 
@@ -26,12 +28,12 @@ Manage your resume data and preferences in simple root configuration files and g
 
 ## Available Themes
 
-`dotcv` includes three themes out of the box. You can configure the active theme in `dotcv.config.json` or preview each theme live at `/preview/<theme>`.
+`dotcv` includes three themes out of the box. You can configure the active theme in `dotcv.config.json` or preview each theme live via the links below:
 
 ### 1. Classic Theme (`classic`)
 An elegant, centered single-column layout with clean typography and subtle accents. Suitable for any industry.
 
-*Live preview:* `http://localhost:4321/preview/classic`
+[**View Classic Demo ↗**](https://tjaugust01.github.io/dotcv/) *(Local: `http://localhost:4321/preview/classic`)*
 
 ![Classic Theme Preview](docs/images/theme-classic.png)
 
@@ -40,7 +42,7 @@ An elegant, centered single-column layout with clean typography and subtle accen
 ### 2. Sidebar Theme (`sidebar`)
 A modern two-column layout featuring a sticky profile sidebar on the left and chronological career milestones on the right.
 
-*Live preview:* `http://localhost:4321/preview/sidebar`
+[**View Sidebar Demo ↗**](https://tjaugust01.github.io/dotcv/preview/sidebar) *(Local: `http://localhost:4321/preview/sidebar`)*
 
 ![Sidebar Theme Preview](docs/images/theme-sidebar.png)
 
@@ -49,7 +51,7 @@ A modern two-column layout featuring a sticky profile sidebar on the left and ch
 ### 3. Timeline Theme (`timeline`)
 A timeline layout designed for engineers and creatives, complete with a dark mode toggle, hero profile header, and tagged cards.
 
-*Live preview:* `http://localhost:4321/preview/timeline`
+[**View Timeline Demo ↗**](https://tjaugust01.github.io/dotcv/preview/timeline) *(Local: `http://localhost:4321/preview/timeline`)*
 
 ![Timeline Theme Preview](docs/images/theme-timeline.png)
 
